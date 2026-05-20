@@ -1,5 +1,5 @@
 (function(){
-  const DIRS = ['up','down','left','right','up-right','up-left','down-right','down-left'];
+  const DIRS = ['up','down','left','right','up-left','up-right','down-left','down-right'];
 
   function resolveDir(el){
     const explicit = el.getAttribute('data-punch');
@@ -20,6 +20,24 @@
     if(dx > 0 && dy < 0) return 'up-right';
     if(dx < 0 && dy > 0) return 'down-left';
     return 'up-left';
+  }
+
+  function computeStart(dir, rect){
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    const bx = rect.left + rect.width/2;
+    const by = rect.top + rect.height/2;
+    const M = 260;
+    let gx = 0, gy = 0, rot = 0;
+    if(dir === 'up')         { gx = 0;             gy = (H - by) + M; rot = -6; }
+    else if(dir === 'down')  { gx = 0;             gy = -(by + M);    rot = 6; }
+    else if(dir === 'left')  { gx = (W - bx) + M;  gy = 0;            rot = -12; }
+    else if(dir === 'right') { gx = -(bx + M);     gy = 0;            rot = 12; }
+    else if(dir === 'up-left')   { gx = (W - bx) + M; gy = (H - by) + M; rot = -18; }
+    else if(dir === 'up-right')  { gx = -(bx + M);    gy = (H - by) + M; rot = 18; }
+    else if(dir === 'down-left') { gx = (W - bx) + M; gy = -(by + M);    rot = -18; }
+    else if(dir === 'down-right'){ gx = -(bx + M);    gy = -(by + M);    rot = 18; }
+    return { gx, gy, rot };
   }
 
   function gloveMarkup(){
@@ -67,6 +85,61 @@
       </svg>`;
   }
 
+  const SHARDS = [
+    { clip:'polygon(45% 52%, 15% 0%, 75% 0%)',                              tx: 20,  ty:-110, r:-14 },
+    { clip:'polygon(45% 52%, 75% 0%, 100% 0%, 100% 40%)',                   tx: 100, ty: -60, r: 28 },
+    { clip:'polygon(45% 52%, 100% 40%, 100% 100%, 60% 100%)',               tx: 115, ty:  60, r: 52 },
+    { clip:'polygon(45% 52%, 60% 100%, 10% 100%)',                          tx: -10, ty: 120, r:-22 },
+    { clip:'polygon(45% 52%, 10% 100%, 0% 100%, 0% 0%, 15% 0%)',            tx:-110, ty: -28, r:-52 },
+  ];
+
+  function readBackground(el){
+    const cs = window.getComputedStyle(el);
+    const bgImage = cs.backgroundImage;
+    const bgColor = cs.backgroundColor;
+    const borderColor = cs.borderTopColor;
+    if(bgImage && bgImage !== 'none' && !bgImage.startsWith('url(')) return bgImage;
+    if(bgColor && bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') return bgColor;
+    if(borderColor && borderColor !== 'rgba(0, 0, 0, 0)' && borderColor !== 'transparent') return 'linear-gradient(135deg,' + borderColor + ',#dc2626)';
+    return 'linear-gradient(135deg,#2a2a2a,#dc2626)';
+  }
+
+  function shatter(el, rect){
+    const bg = readBackground(el);
+    const container = document.createElement('div');
+    container.className = 'btn-shatter';
+    container.style.left = rect.left + 'px';
+    container.style.top = rect.top + 'px';
+    container.style.width = rect.width + 'px';
+    container.style.height = rect.height + 'px';
+
+    el.style.visibility = 'hidden';
+
+    const flash = document.createElement('div');
+    flash.className = 'btn-flash';
+    container.appendChild(flash);
+
+    SHARDS.forEach((s, i)=>{
+      const sd = document.createElement('div');
+      sd.className = 'shard';
+      sd.style.background = bg;
+      sd.style.clipPath = s.clip;
+      sd.style.webkitClipPath = s.clip;
+      sd.style.setProperty('--tx', s.tx + 'px');
+      sd.style.setProperty('--ty', s.ty + 'px');
+      sd.style.setProperty('--r', s.r + 'deg');
+      sd.style.animationDelay = (i * 14) + 'ms';
+      container.appendChild(sd);
+    });
+
+    const crackEl = document.createElement('div');
+    crackEl.className = 'btn-crack-overlay';
+    crackEl.innerHTML = crackMarkup();
+    container.appendChild(crackEl);
+
+    document.body.appendChild(container);
+  }
+
   let inFlight = false;
   function fire(el){
     if(inFlight) return;
@@ -75,25 +148,31 @@
     inFlight = true;
 
     const dir = resolveDir(el);
-    const r = el.getBoundingClientRect();
-    const fx = ((r.left + r.width/2) / window.innerWidth) * 100;
-    const fy = ((r.top + r.height/2) / window.innerHeight) * 100;
+    const rect = el.getBoundingClientRect();
+    const bx = rect.left + rect.width/2;
+    const by = rect.top + rect.height/2;
+    const { gx, gy, rot } = computeStart(dir, rect);
 
     const overlay = document.createElement('div');
-    overlay.className = 'punch-overlay punch-' + dir;
-    overlay.style.setProperty('--fx', fx + '%');
-    overlay.style.setProperty('--fy', fy + '%');
-    overlay.innerHTML = `
-      <div class="flash"></div>
-      <div class="crack">${crackMarkup()}</div>
-      <div class="glove-wrap">${gloveMarkup()}</div>
-    `;
+    overlay.className = 'punch-overlay';
+    overlay.style.setProperty('--bx', bx + 'px');
+    overlay.style.setProperty('--by', by + 'px');
+    overlay.style.setProperty('--gx', gx + 'px');
+    overlay.style.setProperty('--gy', gy + 'px');
+    overlay.style.setProperty('--rot', rot + 'deg');
+    overlay.innerHTML = `<div class="glove-wrap">${gloveMarkup()}</div>`;
     document.body.appendChild(overlay);
     document.body.classList.add('punch-locking');
 
-    window.setTimeout(()=>document.body.classList.add('punch-shake'), 280);
-    window.setTimeout(()=>document.body.classList.remove('punch-shake'), 660);
-    window.setTimeout(()=>{ window.location.href = href; }, 540);
+    const IMPACT = 360;
+    const TOTAL = 860;
+
+    window.setTimeout(()=>{
+      shatter(el, rect);
+      document.body.classList.add('punch-shake');
+    }, IMPACT);
+    window.setTimeout(()=>document.body.classList.remove('punch-shake'), IMPACT + 320);
+    window.setTimeout(()=>{ window.location.href = href; }, TOTAL);
   }
 
   function init(){
