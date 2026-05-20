@@ -37,6 +37,22 @@
 .about-cta h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 @media (max-width:920px){
-  .about-story .grid,.about-place .grid{grid-template-columns:1fr}
-  .about-numbers .grid{grid-template-columns:1fr 1fr}
+  .about-story{padding:60px 0}
+  .about-story .grid,.about-place .grid{grid-template-columns:1fr;gap:32px}
+  .about-story .side{padding:24px}
+  .about-numbers{padding:44px 0}
+  .about-numbers .grid{grid-template-columns:1fr 1fr;gap:12px}
+  .about-numbers .stat{padding:22px}
+  .about-numbers .stat .n{font-size:2.2rem}
+  .about-numbers .stat .l{font-size:.78rem;letter-spacing:.14em}
+  .about-place{padding:60px 0}
+  .about-place .photo{aspect-ratio:5/3}
+  .philosophy-quote{padding:56px 0}
+  .philosophy-quote .q{font-size:clamp(1.3rem,5.5vw,1.8rem)}
+  .about-cta{padding:60px 0}
+}
+@media (max-width:560px){
+  .about-numbers .grid{grid-template-columns:1fr}
+  .about-place li{padding-left:24px;font-size:.94rem}
+  .about-place li::before{width:11px;height:11px;top:8px}
 }

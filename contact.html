@@ -13,12 +13,12 @@
 <header class="topbar">
   <div class="shell topbar-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark"><img src="assets/elephant-mark.svg" alt=""></span>
       <span class="brand-text">
         <span class="en">ELEPHANT</span>
         <span class="zh">MUAY · THAI</span>
       </span>
     </a>
+    <button class="nav-toggle" type="button" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="topnav">
       <a href="about.html">简介</a>
       <a href="pricing.html">价格表</a>
@@ -112,43 +112,6 @@
   </div>
 </section>
 
-<section class="form-block">
-  <div class="shell grid">
-    <div>
-      <span class="kbd-tag">在线留言 · MESSAGE</span>
-      <h2 style="margin-top:14px">不方便打电话？<br>留个言<span class="gold">我们回你</span></h2>
-      <p>这边收到留言一般在 2 小时内回复（晚上 10 点后就第二天了）。约体验课直接留个时间段，比来回扯方便。</p>
-    </div>
-    <form>
-      <div class="field">
-        <label for="nm">你叫什么 · NAME</label>
-        <input id="nm" name="name" type="text" placeholder="随便填，能对得上号就行" required>
-      </div>
-      <div class="field">
-        <label for="ph">联系方式 · CONTACT</label>
-        <input id="ph" name="phone" type="text" placeholder="电话或微信号" required>
-      </div>
-      <div class="field">
-        <label for="ty">想问什么 · TOPIC</label>
-        <select id="ty" name="type">
-          <option>预约体验课</option>
-          <option>咨询办卡</option>
-          <option>私教安排</option>
-          <option>青少年班咨询</option>
-          <option>其他</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="ms">详细情况 · DETAILS</label>
-        <textarea id="ms" name="message" placeholder="比如 · 想这周末过来试试 / 之前练过两年想看看强度"></textarea>
-      </div>
-      <button class="btn submit" type="submit" data-punch="up">
-        发送 <span class="arrow">→</span>
-      </button>
-    </form>
-  </div>
-</section>
-
 <footer class="footer">
   <div class="shell">
     <div class="footer-grid">
@@ -184,6 +147,7 @@
   </div>
 </footer>
 
+<script src="js/site.js"></script>
 <script src="js/punch.js"></script>
 </body>
 </html>

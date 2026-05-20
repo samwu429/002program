@@ -1,4 +1,4 @@
-.hero{position:relative;padding:88px 0 44px;overflow:hidden}
+.hero{position:relative;padding:88px 0 44px;overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:-30% -20% auto auto;width:90%;height:120%;background:radial-gradient(closest-side,rgba(212,166,74,.22),transparent 70%);pointer-events:none}
 .hero::after{content:"";position:absolute;left:-15%;bottom:-40%;width:60%;height:80%;background:radial-gradient(closest-side,rgba(200,48,42,.16),transparent 70%);pointer-events:none}
 .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
@@ -12,7 +12,7 @@
 .hero .thai{font-family:"Noto Sans SC",sans-serif;color:var(--gold-3);font-size:1rem;letter-spacing:.32em;margin-top:14px;text-transform:uppercase;font-weight:700}
 .hero p.lede{margin-top:22px;color:var(--text-soft);font-size:1.06rem;max-width:540px;line-height:1.75}
 .hero .hero-cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
-.hero .hero-stats{margin-top:48px;display:flex;gap:36px;flex-wrap:wrap}
+.hero .hero-stats{margin-top:48px;display:flex;gap:18px 36px;flex-wrap:wrap}
 .hero .hero-stats .st{display:flex;flex-direction:column}
 .hero .hero-stats .st .n{font-family:"Cinzel",serif;font-size:1.8rem;color:var(--gold-2);font-weight:700;line-height:1}
 .hero .hero-stats .st .l{color:var(--muted);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin-top:6px;font-family:"Oswald",sans-serif}
@@ -86,17 +86,6 @@
 .pillars-grid .item h3{font-size:1.15rem;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.04em}
 .pillars-grid .item p{color:var(--text-soft);font-size:.94rem;margin-top:10px;line-height:1.7}
 
-.history{padding:90px 0}
-.history-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:start}
-.history-head h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.history-head p{color:var(--text-soft);margin-top:18px;font-size:.98rem;line-height:1.8}
-.timeline{display:grid;gap:0;border-left:1px solid var(--line-2);padding-left:30px;position:relative}
-.timeline .tl-item{padding:18px 0 26px;position:relative}
-.timeline .tl-item::before{content:"";position:absolute;left:-37px;top:24px;width:14px;height:14px;background:var(--gold-grad);border-radius:50%;border:3px solid var(--bg);box-shadow:0 0 0 1px var(--gold)}
-.timeline .tl-item .yr{font-family:"Cinzel",serif;color:var(--gold-2);font-size:.96rem;letter-spacing:.18em;font-weight:700}
-.timeline .tl-item h4{font-size:1.1rem;color:var(--text);margin-top:6px;font-family:"Cinzel",serif}
-.timeline .tl-item p{color:var(--text-soft);font-size:.92rem;margin-top:6px;line-height:1.7}
-
 .cta-strip{padding:88px 0;text-align:center;background:linear-gradient(180deg,#0a0907,#1a1108);position:relative;overflow:hidden}
 .cta-strip::before{content:"";position:absolute;inset:0;background:radial-gradient(closest-side at 50% 50%,rgba(212,166,74,.15),transparent 60%);pointer-events:none}
 .cta-strip .shell{position:relative;z-index:1}
@@ -106,18 +95,71 @@
 .cta-strip p{color:var(--text-soft);margin:18px auto 32px;max-width:560px;font-size:1rem}
 
 @media (max-width:920px){
-  .hero-inner,.history-grid{grid-template-columns:1fr;gap:36px}
-  .hero-visual{max-width:380px;margin:0 auto}
-  .compass-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .hero{padding:56px 0 32px}
+  .hero-inner{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:clamp(2.8rem,11vw,4.6rem)}
+  .hero .tag{margin-bottom:18px;letter-spacing:.32em;font-size:.7rem}
+  .hero .tag::before,.hero .tag::after{width:24px}
+  .hero .hero-stats{margin-top:34px;gap:24px}
+  .hero .hero-stats .st .n{font-size:1.5rem}
+  .hero .hero-stats .st .l{font-size:.7rem;letter-spacing:.18em}
+  .hero-visual{max-width:340px;margin:0 auto}
+
+  .banner-strip{padding:18px 0}
+  .banner-track{gap:40px}
+  .banner-track span{font-size:.86rem;letter-spacing:.26em;gap:40px}
+
+  .compass{padding:60px 0 72px}
+  .compass-head{margin-bottom:32px}
+  .compass-grid{grid-template-columns:1fr;grid-template-rows:auto;gap:14px}
+  .compass-grid .pc{padding:24px 22px 26px;min-height:auto}
+  .compass-grid .pc h3{font-size:1.55rem;margin-top:6px}
+  .compass-grid .pc .sub{font-size:.9rem;max-width:none;padding-right:80px}
+  .compass-grid .pc .arrow{right:18px;bottom:16px;font-size:.72rem;letter-spacing:.24em}
   .compass-grid .pc.up,.compass-grid .pc.right,.compass-grid .pc.left,.compass-grid .pc.down,.compass-grid .core{grid-column:1;grid-row:auto}
-  .compass-grid .core{order:0}
+  .compass-grid .core{order:0;min-height:160px;padding:22px}
+  .compass-grid .core img{width:42%}
   .compass-grid .pc.up{order:1}
   .compass-grid .pc.right{order:2}
   .compass-grid .pc.down{order:3}
   .compass-grid .pc.left{order:4}
   .compass-grid .filler{display:none}
-  .pillars-grid{grid-template-columns:1fr 1fr}
+
+  .pillars{padding:64px 0}
+  .pillars-head{margin-bottom:36px}
+  .pillars-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .pillars-grid .item{padding:22px 18px}
+  .pillars-grid .item h3{font-size:1.05rem}
+  .pillars-grid .item p{font-size:.88rem}
+  .pillars-grid .item .ic{width:36px;height:36px;margin-bottom:12px}
+
+  .cta-strip{padding:64px 0}
+  .cta-strip p{font-size:.94rem;margin:14px auto 22px}
 }
 @media (max-width:560px){
-  .pillars-grid{grid-template-columns:1fr}
+  .hero{padding:36px 0 24px}
+  .hero h1{font-size:clamp(2.4rem,11vw,3.6rem)}
+  .hero .thai{font-size:.86rem;letter-spacing:.24em}
+  .hero p.lede{font-size:.96rem;margin-top:18px}
+  .hero .hero-cta{margin-top:24px;flex-direction:column;width:100%}
+  .hero .hero-cta .btn{width:100%}
+  .hero .hero-stats{gap:16px 28px;margin-top:28px}
+  .hero .hero-stats .st .n{font-size:1.35rem}
+  .hero-visual{max-width:240px}
+  .hero-visual::after{animation:none}
+
+  .banner-strip{padding:14px 0}
+  .banner-track{gap:28px}
+  .banner-track span{font-size:.74rem;letter-spacing:.22em;gap:28px}
+
+  .compass-grid .pc{padding:20px 18px 22px}
+  .compass-grid .pc h3{font-size:1.35rem}
+  .compass-grid .pc .num{font-size:.68rem;letter-spacing:.24em}
+  .compass-grid .pc .sub{padding-right:60px;font-size:.86rem}
+  .compass-grid .core{min-height:140px}
+
+  .pillars-grid{grid-template-columns:1fr;gap:12px}
+
+  .cta-strip{padding:48px 0}
+  .cta-strip h2{font-size:clamp(1.6rem,7vw,2.2rem)}
 }

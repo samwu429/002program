@@ -1,27 +1,30 @@
 .coach-list{padding:64px 0 96px}
-.coach-list .row{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;padding:54px 0;border-bottom:1px solid var(--line);align-items:start;position:relative}
-.coach-list .row:nth-child(even){grid-template-columns:1.05fr .95fr}
-.coach-list .row:nth-child(even) .portrait{order:2}
-.coach-list .row:nth-child(even) .meta{order:1}
-.coach-list .row:last-child{border-bottom:none}
+.coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 
-.coach-list .portrait{aspect-ratio:4/5;background:linear-gradient(140deg,#1a1610,#0a0805);border:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center}
-.coach-list .portrait::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(212,166,74,.06) 0 14px,transparent 14px 28px);pointer-events:none}
-.coach-list .portrait::after{content:"";position:absolute;left:14px;right:14px;top:14px;bottom:14px;border:1px solid rgba(212,166,74,.18);pointer-events:none}
-.coach-list .portrait .ph{font-family:"Cinzel",serif;letter-spacing:.32em;color:var(--gold-3);font-size:.82rem;z-index:1;font-weight:700}
-.coach-list .portrait .tag{position:absolute;top:22px;left:22px;background:var(--gold-grad);color:#0a0907;font-family:"Cinzel",serif;letter-spacing:.18em;font-size:.7rem;padding:6px 12px;text-transform:uppercase;z-index:1;font-weight:700}
-.coach-list .portrait .lvl{position:absolute;top:22px;right:22px;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.24em;font-size:.74rem;z-index:1;font-weight:700}
+.coach-card{display:grid;grid-template-rows:auto auto;background:linear-gradient(180deg,#100c08,#0a0805);border:1px solid var(--line);overflow:hidden;position:relative;transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+.coach-card:hover{border-color:var(--gold-3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 0 1px rgba(212,166,74,.2)}
+.coach-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-grad);z-index:2;opacity:.7;transition:opacity .25s var(--ease)}
+.coach-card:hover::before{opacity:1}
 
-.coach-list .meta .who{font-family:"Cinzel",serif;color:var(--gold-2);letter-spacing:.32em;font-size:.78rem;text-transform:uppercase;font-weight:700}
-.coach-list .meta h2{margin-top:10px;font-size:clamp(2rem,3.6vw,2.8rem)}
-.coach-list .meta h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.coach-list .meta .role{color:var(--muted);margin-top:6px;font-size:.96rem;font-family:"Oswald",sans-serif;letter-spacing:.04em}
-.coach-list .meta .bio{margin-top:22px;color:var(--text-soft);font-size:1rem;line-height:1.8}
-.coach-list .meta .bio p{margin-bottom:12px}
-.coach-list .meta .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
-.coach-list .meta .chip{border:1px solid var(--line-2);padding:8px 14px;font-size:.78rem;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.16em;background:rgba(212,166,74,.04);font-weight:700}
-.coach-list .meta .quote{margin-top:28px;border-left:3px solid var(--gold);padding:8px 0 8px 22px;color:var(--text);font-size:1.04rem;font-style:italic;line-height:1.6;position:relative}
-.coach-list .meta .quote::before{content:"\201C";position:absolute;left:18px;top:-8px;color:var(--gold);font-size:3rem;font-family:"Cinzel",serif;opacity:.4}
+.coach-card .portrait{aspect-ratio:16/10;background:linear-gradient(140deg,#1a1610,#0a0805);position:relative;overflow:hidden;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.coach-card .portrait::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(212,166,74,.06) 0 14px,transparent 14px 28px);pointer-events:none}
+.coach-card .portrait::after{content:"";position:absolute;left:14px;right:14px;top:14px;bottom:14px;border:1px solid rgba(212,166,74,.16);pointer-events:none}
+.coach-card .portrait .ph{font-family:"Cinzel",serif;letter-spacing:.32em;color:var(--gold-3);font-size:.78rem;z-index:1;font-weight:700}
+.coach-card .portrait .tag{position:absolute;top:18px;left:18px;background:var(--gold-grad);color:#0a0907;font-family:"Cinzel",serif;letter-spacing:.16em;font-size:.66rem;padding:5px 10px;text-transform:uppercase;z-index:1;font-weight:700}
+.coach-card .portrait .lvl{position:absolute;top:18px;right:18px;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.22em;font-size:.7rem;z-index:1;font-weight:700}
+
+.coach-card .meta{padding:26px 26px 28px;display:flex;flex-direction:column;gap:12px}
+.coach-card .meta .who{font-family:"Cinzel",serif;color:var(--gold-2);letter-spacing:.28em;font-size:.72rem;text-transform:uppercase;font-weight:700}
+.coach-card .meta h2{font-size:1.7rem;font-family:"Cinzel",serif;letter-spacing:.04em;line-height:1.15}
+.coach-card .meta h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.coach-card .meta .role{color:var(--muted);font-size:.86rem;font-family:"Oswald",sans-serif;letter-spacing:.04em;line-height:1.5}
+.coach-card .meta .bio{color:var(--text-soft);font-size:.94rem;line-height:1.75}
+.coach-card .meta .bio p{margin-bottom:8px}
+.coach-card .meta .bio strong{color:var(--gold-2);font-weight:700}
+.coach-card .meta .chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:4px}
+.coach-card .meta .chip{border:1px solid var(--line-2);padding:6px 11px;font-size:.72rem;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.14em;background:rgba(212,166,74,.04);font-weight:700}
+.coach-card .meta .quote{border-left:3px solid var(--gold);padding:8px 0 8px 18px;color:var(--text);font-size:.96rem;font-style:italic;line-height:1.55;margin-top:6px;position:relative}
+.coach-card .meta .quote::before{content:"\201C";position:absolute;left:12px;top:-10px;color:var(--gold);font-size:2.4rem;font-family:"Cinzel",serif;opacity:.35}
 
 .coach-cta{padding:88px 0;text-align:center;background:linear-gradient(180deg,#0a0907,#1a1108);position:relative;overflow:hidden}
 .coach-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(closest-side at 50% 50%,rgba(212,166,74,.14),transparent 60%);pointer-events:none}
@@ -30,6 +33,13 @@
 .coach-cta p{color:var(--text-soft);margin:18px auto 32px;max-width:540px}
 
 @media (max-width:920px){
-  .coach-list .row,.coach-list .row:nth-child(even){grid-template-columns:1fr;gap:28px}
-  .coach-list .row:nth-child(even) .portrait,.coach-list .row:nth-child(even) .meta{order:initial}
+  .coach-list{padding:48px 0 72px}
+  .coach-grid{grid-template-columns:1fr;gap:20px}
+  .coach-card .meta{padding:22px 20px 24px}
+  .coach-card .meta h2{font-size:1.5rem}
+}
+@media (max-width:560px){
+  .coach-card .portrait{aspect-ratio:5/3}
+  .coach-card .meta .chip{font-size:.68rem;padding:5px 9px}
+  .coach-card .meta .quote{font-size:.9rem}
 }
