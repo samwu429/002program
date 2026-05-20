@@ -33,7 +33,6 @@ python -m http.server 8000
 │  └─ punch.js          拳头过场逻辑：方向判断 / 速度线 / 4 段拳套残影 / 闪光 / 24 火花 / 12 块碎片 / 多重冲击波 / 全屏裂纹 / 烟尘 / 余烬 / 屏幕震动 + 缩放 + 染色 + 闭幕 + Web Audio 合成的低音 + 玻璃碎裂声
 ├─ assets/
 │  ├─ elephant-logo.png 拳馆主 logo（图片）
-│  ├─ elephant-mark.svg 导航栏小金象
 │  ├─ glove.svg         拳套
 │  └─ crack.svg         击中碎裂线
 └─ README.md
