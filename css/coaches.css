@@ -9,7 +9,6 @@
 .coach-card .portrait::after{content:"";position:absolute;left:14px;right:14px;top:14px;bottom:14px;border:1px solid rgba(212,166,74,.16);pointer-events:none}
 .coach-card .portrait .ph{font-family:"Cinzel",serif;letter-spacing:.32em;color:var(--gold-3);font-size:.78rem;z-index:1;font-weight:700}
 .coach-card .portrait .tag{position:absolute;top:18px;left:18px;background:var(--gold);color:#0a0907;font-family:"Cinzel",serif;letter-spacing:.16em;font-size:.66rem;padding:5px 10px;text-transform:uppercase;z-index:1;font-weight:700}
-.coach-card .portrait .lvl{position:absolute;top:18px;right:18px;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.22em;font-size:.7rem;z-index:1;font-weight:700}
 
 .coach-card .meta{padding:26px 26px 28px;display:flex;flex-direction:column;gap:12px}
 .coach-card .meta .who{font-family:"Cinzel",serif;color:var(--gold-2);letter-spacing:.28em;font-size:.72rem;text-transform:uppercase;font-weight:700}
