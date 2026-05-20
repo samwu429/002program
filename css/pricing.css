@@ -1,0 +1,46 @@
+.price-tabs{padding:24px 0 0}
+.price-tabs .pills{display:inline-flex;border:1px solid var(--line);padding:4px;gap:4px}
+.price-tabs .pills button{padding:10px 16px;font-family:"Oswald",sans-serif;letter-spacing:.18em;font-size:.78rem;color:var(--muted);text-transform:uppercase}
+.price-tabs .pills button.on{background:var(--red);color:#fff}
+
+.price-grid{padding:48px 0 80px}
+.price-grid .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.price-card{position:relative;border:1px solid var(--line);background:#0f0f0f;padding:28px 26px 32px;display:flex;flex-direction:column;gap:14px;min-height:380px}
+.price-card.feat{border-color:var(--red);background:linear-gradient(180deg,#170c0c,#0d0606)}
+.price-card .ribbon{position:absolute;top:0;right:24px;background:var(--red);color:#fff;font-family:"Oswald",sans-serif;font-size:.72rem;letter-spacing:.24em;padding:6px 12px;text-transform:uppercase}
+.price-card h3{font-family:"Oswald",sans-serif;font-size:1.6rem;letter-spacing:.05em}
+.price-card .sub{color:var(--muted);font-size:.92rem}
+.price-card .price{display:flex;align-items:baseline;gap:8px;margin-top:8px}
+.price-card .price .cur{color:var(--muted);font-family:"Oswald",sans-serif}
+.price-card .price .num{font-family:"Oswald",sans-serif;font-size:3rem;color:var(--text);line-height:1}
+.price-card .price .per{color:var(--muted);font-size:.9rem}
+.price-card ul{list-style:none;display:grid;gap:10px;margin-top:6px}
+.price-card li{padding-left:22px;position:relative;color:#cfcfcf;font-size:.94rem}
+.price-card li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--red)}
+.price-card .foot{margin-top:auto}
+
+.price-private{padding:60px 0;background:#0c0c0c;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.price-private .head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+.price-private .table{border:1px solid var(--line);background:#0a0a0a}
+.price-private .row{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr;gap:12px;padding:18px 22px;border-bottom:1px solid #1a1a1a;align-items:center}
+.price-private .row.h{background:#111;color:var(--muted);font-family:"Oswald",sans-serif;letter-spacing:.22em;font-size:.78rem;text-transform:uppercase}
+.price-private .row:last-child{border-bottom:none}
+.price-private .row .nm{font-weight:600}
+.price-private .row .px{color:var(--gold);font-family:"Oswald",sans-serif;font-size:1.1rem}
+
+.price-faq{padding:72px 0}
+.price-faq .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.price-faq details{border:1px solid var(--line);background:#0f0f0f;padding:18px 22px}
+.price-faq details[open]{border-color:var(--red)}
+.price-faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.price-faq summary::-webkit-details-marker{display:none}
+.price-faq summary::after{content:"+";color:var(--red-3);font-family:"Oswald",sans-serif;font-size:1.4rem}
+.price-faq details[open] summary::after{content:"–"}
+.price-faq p{color:#bdbdbd;margin-top:10px;font-size:.95rem}
+
+@media (max-width:920px){
+  .price-grid .grid{grid-template-columns:1fr}
+  .price-private .row{grid-template-columns:1.2fr 1fr;gap:6px}
+  .price-private .row .extra{display:none}
+  .price-faq .grid{grid-template-columns:1fr}
+}

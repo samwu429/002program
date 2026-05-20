@@ -1,0 +1,30 @@
+.coach-list{padding:60px 0 90px}
+.coach-list .row{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;padding:48px 0;border-bottom:1px solid var(--line);align-items:start}
+.coach-list .row:nth-child(even){grid-template-columns:1.1fr .9fr}
+.coach-list .row:nth-child(even) .portrait{order:2}
+.coach-list .row:nth-child(even) .meta{order:1}
+.coach-list .row:last-child{border-bottom:none}
+
+.coach-list .portrait{aspect-ratio:4/5;background:linear-gradient(140deg,#1c1c1c,#0a0a0a);border:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center}
+.coach-list .portrait::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(220,38,38,.06) 0 14px,transparent 14px 28px);pointer-events:none}
+.coach-list .portrait .ph{font-family:"Oswald",sans-serif;letter-spacing:.32em;color:#3a3a3a;font-size:.8rem;z-index:1}
+.coach-list .portrait .tag{position:absolute;top:18px;left:18px;background:var(--red);color:#fff;font-family:"Oswald",sans-serif;letter-spacing:.18em;font-size:.7rem;padding:6px 10px;text-transform:uppercase;z-index:1}
+.coach-list .portrait .silhouette{width:60%;height:auto;opacity:.7}
+
+.coach-list .meta .who{font-family:"Oswald",sans-serif;color:var(--gold);letter-spacing:.28em;font-size:.78rem;text-transform:uppercase}
+.coach-list .meta h2{margin-top:8px;font-size:clamp(2rem,3.4vw,2.6rem)}
+.coach-list .meta .role{color:var(--muted);margin-top:4px;font-size:.96rem}
+.coach-list .meta .bio{margin-top:18px;color:#cfcfcf;font-size:1rem}
+.coach-list .meta .bio p{margin-bottom:10px}
+.coach-list .meta .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.coach-list .meta .chip{border:1px solid var(--line);padding:6px 12px;font-size:.82rem;color:var(--muted);font-family:"Oswald",sans-serif;letter-spacing:.18em}
+.coach-list .meta .quote{margin-top:24px;border-left:3px solid var(--red);padding:6px 0 6px 18px;color:#e5e5e5;font-size:1.02rem;font-style:italic}
+
+.coach-cta{padding:64px 0;text-align:center;background:linear-gradient(180deg,#0a0a0a,#150808)}
+.coach-cta h2 em{color:var(--red-3);font-style:normal}
+.coach-cta p{color:var(--muted);margin:14px auto 28px;max-width:520px}
+
+@media (max-width:920px){
+  .coach-list .row,.coach-list .row:nth-child(even){grid-template-columns:1fr;gap:24px}
+  .coach-list .row:nth-child(even) .portrait,.coach-list .row:nth-child(even) .meta{order:initial}
+}

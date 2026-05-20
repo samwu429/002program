@@ -1,0 +1,41 @@
+.contact-grid{padding:64px 0 60px}
+.contact-grid .grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.contact-card{border:1px solid var(--line);background:#0f0f0f;padding:30px;display:flex;flex-direction:column;gap:18px}
+.contact-card .label{font-family:"Oswald",sans-serif;letter-spacing:.28em;color:var(--gold);font-size:.78rem;text-transform:uppercase}
+.contact-card h2{font-size:1.7rem}
+.contact-card .big{font-family:"Oswald",sans-serif;font-size:1.5rem;color:var(--text);letter-spacing:.04em}
+.contact-card p{color:#cfcfcf;font-size:.96rem}
+.contact-card .hours{display:grid;gap:8px}
+.contact-card .hours .h-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #1f1f1f;font-size:.95rem}
+.contact-card .hours .h-row:last-child{border-bottom:none}
+.contact-card .hours .h-row span:last-child{color:var(--muted);font-family:"Oswald",sans-serif;letter-spacing:.06em}
+.contact-card .qr{display:flex;gap:18px;align-items:center}
+.contact-card .qr .img{width:120px;height:120px;background:#fff;display:grid;place-items:center;color:#000;font-size:.72rem;text-align:center;padding:8px}
+.contact-card .qr .img svg{width:104px;height:104px}
+.contact-card .qr .qr-cap{color:var(--muted);font-size:.92rem}
+
+.map-block{padding:0 0 80px}
+.map-shell{border:1px solid var(--line);position:relative;aspect-ratio:21/9;background:linear-gradient(140deg,#0c0c0c,#181818);overflow:hidden}
+.map-shell .gridbg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;opacity:.5}
+.map-shell .road{position:absolute;left:0;right:0;top:55%;height:2px;background:#444}
+.map-shell .road.v{left:60%;top:0;bottom:0;width:2px;height:auto}
+.map-shell .pin{position:absolute;left:60%;top:55%;transform:translate(-50%,-100%);color:var(--red);display:flex;flex-direction:column;align-items:center;gap:6px}
+.map-shell .pin .dot{width:18px;height:18px;background:var(--red);border-radius:50%;box-shadow:0 0 0 6px rgba(220,38,38,.25),0 0 0 16px rgba(220,38,38,.12)}
+.map-shell .pin .lbl{background:#0a0a0a;border:1px solid var(--red);padding:4px 10px;font-family:"Oswald",sans-serif;letter-spacing:.2em;font-size:.78rem;color:#fff;white-space:nowrap}
+.map-shell .legend{position:absolute;left:20px;bottom:18px;font-family:"Oswald",sans-serif;color:var(--muted);font-size:.78rem;letter-spacing:.2em}
+
+.form-block{padding:80px 0}
+.form-block .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.form-block h2{margin-bottom:14px}
+.form-block p{color:var(--muted);max-width:380px;font-size:.96rem}
+.form-block form{display:grid;gap:14px}
+.form-block .field label{display:block;font-size:.84rem;color:var(--muted);font-family:"Oswald",sans-serif;letter-spacing:.22em;text-transform:uppercase;margin-bottom:6px}
+.form-block input,.form-block textarea,.form-block select{width:100%;background:#0a0a0a;border:1px solid var(--line);color:var(--text);padding:14px 16px;font:inherit;outline:none;transition:border-color .2s var(--ease)}
+.form-block input:focus,.form-block textarea:focus,.form-block select:focus{border-color:var(--red)}
+.form-block textarea{min-height:120px;resize:vertical}
+.form-block .submit{margin-top:6px}
+
+@media (max-width:920px){
+  .contact-grid .grid,.form-block .grid{grid-template-columns:1fr}
+  .map-shell{aspect-ratio:4/3}
+}

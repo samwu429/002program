@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+
+:root{
+  --bg:#0a0a0a;
+  --bg-2:#141414;
+  --surface:#1a1a1a;
+  --surface-2:#222;
+  --line:#2a2a2a;
+  --text:#f3f3f3;
+  --muted:#9a9a9a;
+  --red:#dc2626;
+  --red-2:#b91c1c;
+  --red-3:#ef4444;
+  --gold:#d4af37;
+  --gold-2:#f5c14a;
+  --ease:cubic-bezier(.2,.6,.3,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{min-height:100vh;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+h1,h2,h3,.display{font-family:"Oswald","Noto Sans SC",sans-serif;letter-spacing:.02em}
+h1{font-size:clamp(2.6rem,6vw,5rem);font-weight:700;line-height:1.05}
+h2{font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:600}
+p{color:#d6d6d6}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 28px}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.78);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Oswald",sans-serif;font-weight:700;letter-spacing:.14em;font-size:1.05rem}
+.brand-mark{width:30px;height:30px;background:var(--red);clip-path:polygon(20% 0,80% 0,100% 40%,80% 100%,20% 100%,0 40%);position:relative}
+.brand-mark::after{content:"";position:absolute;inset:6px;background:var(--bg);clip-path:polygon(20% 0,80% 0,100% 40%,80% 100%,20% 100%,0 40%)}
+.brand-name{color:var(--text)}
+.brand-name em{color:var(--red);font-style:normal}
+.topnav{display:flex;gap:22px;font-size:.92rem;color:var(--muted)}
+.topnav a{transition:color .2s var(--ease);position:relative}
+.topnav a:hover{color:var(--text)}
+.topnav a.active{color:var(--gold)}
+.topnav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-22px;height:2px;background:var(--gold)}
+
+.page-head{padding:96px 0 56px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 360px at 50% -10%,rgba(220,38,38,.18),transparent 60%)}
+.page-head .eyebrow{color:var(--red-3);font-family:"Oswald",sans-serif;letter-spacing:.4em;font-size:.78rem;text-transform:uppercase;margin-bottom:14px}
+.page-head h1{max-width:880px}
+.page-head .lede{color:var(--muted);margin-top:18px;max-width:680px;font-size:1.05rem}
+
+section.block{padding:72px 0;border-bottom:1px solid var(--line)}
+section.block:last-of-type{border-bottom:none}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;background:var(--red);color:#fff;font-family:"Oswald",sans-serif;letter-spacing:.18em;font-size:.88rem;font-weight:600;text-transform:uppercase;border:2px solid var(--red);transition:transform .15s var(--ease),background .15s var(--ease);clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.btn:hover{background:var(--red-2);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn.ghost:hover{background:var(--surface)}
+.btn .arrow{display:inline-block;transition:transform .2s var(--ease)}
+.btn:hover .arrow{transform:translateX(4px)}
+
+.footer{padding:48px 0 36px;border-top:1px solid var(--line);background:#070707;color:var(--muted);font-size:.88rem}
+.footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
+.footer a:hover{color:var(--text)}
+
+.kbd-tag{display:inline-block;border:1px solid var(--line);padding:4px 8px;font-family:"Oswald",sans-serif;font-size:.74rem;letter-spacing:.18em;color:var(--muted)}
+
+.divider-x{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:24px 0}
+
+::selection{background:var(--red);color:#fff}
+
+@media (max-width:720px){
+  .topnav{display:none}
+  .page-head{padding:64px 0 40px}
+  section.block{padding:54px 0}
+}
