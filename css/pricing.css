@@ -1,53 +1,50 @@
 .price-tabs{padding:28px 0 0}
-.price-tabs .pills{display:inline-flex;border:1px solid var(--line-2);padding:5px;gap:4px;background:#0d0a07}
+.price-tabs .pills{display:inline-flex;border:1px solid var(--line-2);padding:5px;gap:4px;background:var(--bg-2)}
 .price-tabs .pills button{padding:11px 20px;font-family:"Cinzel",serif;letter-spacing:.22em;font-size:.78rem;color:var(--muted);text-transform:uppercase;font-weight:700;transition:color .2s var(--ease)}
 .price-tabs .pills button:hover{color:var(--gold-2)}
-.price-tabs .pills button.on{background:var(--gold-grad);color:#0a0907;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.price-tabs .pills button.on{background:var(--gold);color:#0a0907}
 
 .price-grid{padding:54px 0 90px}
 .price-grid .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.price-card{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,#100c08,#0a0805);padding:32px 28px 36px;display:flex;flex-direction:column;gap:14px;min-height:440px;transition:border-color .3s var(--ease),transform .3s var(--ease)}
-.price-card:hover{transform:translateY(-4px);border-color:var(--gold-3)}
-.price-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--gold-grad);opacity:.5;transition:opacity .3s var(--ease)}
-.price-card:hover::before{opacity:1}
-.price-card.feat{border-color:var(--gold);background:linear-gradient(180deg,#1a130a,#0e0a05);box-shadow:0 0 0 1px var(--gold-3),0 0 40px rgba(212,166,74,.12)}
-.price-card.feat::before{opacity:1;height:4px}
-.price-card .ribbon{position:absolute;top:18px;right:0;background:var(--red);color:#fff;font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.24em;padding:6px 14px;text-transform:uppercase;font-weight:700;clip-path:polygon(10px 0,100% 0,100% 100%,0 100%)}
+.price-card{position:relative;border:1px solid var(--line);background:var(--surface);padding:32px 28px 36px;display:flex;flex-direction:column;gap:14px;min-height:440px;transition:border-color .3s var(--ease),transform .3s var(--ease);border-top:3px solid var(--gold-3)}
+.price-card:hover{transform:translateY(-4px);border-color:var(--gold-3);border-top-color:var(--gold-2)}
+.price-card.feat{border-color:var(--gold);border-top:4px solid var(--gold-2);background:var(--surface-2)}
+.price-card .ribbon{position:absolute;top:18px;right:0;background:var(--red);color:#fff;font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.24em;padding:6px 14px;text-transform:uppercase;font-weight:700}
 .price-card h3{font-family:"Cinzel",serif;font-size:1.7rem;letter-spacing:.06em;color:var(--gold-2)}
 .price-card .sub{color:var(--muted);font-size:.94rem}
 .price-card .price{display:flex;align-items:baseline;gap:8px;margin-top:8px;padding-bottom:18px;border-bottom:1px dashed var(--line)}
 .price-card .price .cur{color:var(--gold-3);font-family:"Cinzel",serif;font-size:1.2rem;font-weight:700}
-.price-card .price .num{font-family:"Cinzel",serif;font-size:3.4rem;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;font-weight:900}
+.price-card .price .num{font-family:"Cinzel",serif;font-size:3.4rem;color:var(--gold-2);line-height:1;font-weight:900}
 .price-card .price .per{color:var(--muted);font-size:.9rem}
 .price-card ul{list-style:none;display:grid;gap:11px;margin-top:6px}
 .price-card li{padding-left:24px;position:relative;color:var(--text-soft);font-size:.94rem;line-height:1.5}
-.price-card li::before{content:"";position:absolute;left:0;top:8px;width:14px;height:2px;background:var(--gold-grad)}
+.price-card li::before{content:"";position:absolute;left:0;top:8px;width:14px;height:2px;background:var(--gold)}
 .price-card .foot{margin-top:auto;padding-top:8px}
 
-.price-private{padding:80px 0;background:linear-gradient(180deg,#0a0805,#15110b,#0a0805);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.price-private{padding:80px 0;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .price-private .head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:14px;margin-bottom:28px}
-.price-private h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.price-private .table{border:1px solid var(--line-2);background:#0c0a07}
+.price-private h2 .gold{color:var(--gold-2)}
+.price-private .table{border:1px solid var(--line-2);background:var(--bg)}
 .price-private .row{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr;gap:14px;padding:20px 24px;border-bottom:1px solid var(--line);align-items:center;transition:background .2s var(--ease)}
 .price-private .row:hover:not(.h){background:rgba(212,166,74,.04)}
-.price-private .row.h{background:#100d08;color:var(--gold-3);font-family:"Cinzel",serif;letter-spacing:.24em;font-size:.78rem;text-transform:uppercase;font-weight:700}
+.price-private .row.h{background:var(--bg-2);color:var(--gold-3);font-family:"Cinzel",serif;letter-spacing:.24em;font-size:.78rem;text-transform:uppercase;font-weight:700}
 .price-private .row:last-child{border-bottom:none}
 .price-private .row .nm{font-weight:600;color:var(--text)}
 .price-private .row .px{color:var(--gold-2);font-family:"Cinzel",serif;font-size:1.15rem;font-weight:700}
 
 .price-extras{padding:80px 0}
-.price-extras h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-extras h2 .gold{color:var(--gold-2)}
 .price-extras .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
-.price-extras .ex{border:1px solid var(--line);background:#0d0a07;padding:24px;position:relative}
+.price-extras .ex{border:1px solid var(--line);background:var(--bg-2);padding:24px;position:relative}
 .price-extras .ex::before{content:"";position:absolute;right:0;top:0;width:24px;height:24px;border-top:1px solid var(--gold-3);border-right:1px solid var(--gold-3);opacity:.6}
 .price-extras .ex .nm{color:var(--muted);font-family:"Cinzel",serif;letter-spacing:.18em;font-size:.78rem;font-weight:700;text-transform:uppercase}
 .price-extras .ex .px{color:var(--gold-2);font-family:"Cinzel",serif;font-size:1.6rem;margin-top:8px;font-weight:700}
 .price-extras .ex .nt{color:var(--text-soft);font-size:.86rem;margin-top:8px;line-height:1.6}
 
-.price-faq{padding:88px 0}
-.price-faq h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-faq{padding:88px 0;background:var(--bg-2);border-top:1px solid var(--line)}
+.price-faq h2 .gold{color:var(--gold-2)}
 .price-faq .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
-.price-faq details{border:1px solid var(--line);background:linear-gradient(180deg,#100c08,#0a0805);padding:22px 26px;transition:border-color .25s var(--ease)}
+.price-faq details{border:1px solid var(--line);background:var(--bg);padding:22px 26px;transition:border-color .25s var(--ease)}
 .price-faq details[open]{border-color:var(--gold-3)}
 .price-faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text);letter-spacing:.02em}
 .price-faq summary::-webkit-details-marker{display:none}

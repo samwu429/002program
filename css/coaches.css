@@ -1,35 +1,31 @@
 .coach-list{padding:64px 0 96px}
 .coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 
-.coach-card{display:grid;grid-template-rows:auto auto;background:linear-gradient(180deg,#100c08,#0a0805);border:1px solid var(--line);overflow:hidden;position:relative;transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
-.coach-card:hover{border-color:var(--gold-3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 0 1px rgba(212,166,74,.2)}
-.coach-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-grad);z-index:2;opacity:.7;transition:opacity .25s var(--ease)}
-.coach-card:hover::before{opacity:1}
+.coach-card{display:grid;grid-template-rows:auto auto;background:var(--surface);border:1px solid var(--line);overflow:hidden;position:relative;transition:border-color .3s var(--ease),transform .3s var(--ease);border-top:2px solid var(--gold-3)}
+.coach-card:hover{border-color:var(--gold-3);transform:translateY(-3px);border-top-color:var(--gold-2)}
 
-.coach-card .portrait{aspect-ratio:16/10;background:linear-gradient(140deg,#1a1610,#0a0805);position:relative;overflow:hidden;display:grid;place-items:center;border-bottom:1px solid var(--line)}
-.coach-card .portrait::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(212,166,74,.06) 0 14px,transparent 14px 28px);pointer-events:none}
+.coach-card .portrait{aspect-ratio:16/10;background:var(--surface-2);position:relative;overflow:hidden;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.coach-card .portrait::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(212,166,74,.05) 0 14px,transparent 14px 28px);pointer-events:none}
 .coach-card .portrait::after{content:"";position:absolute;left:14px;right:14px;top:14px;bottom:14px;border:1px solid rgba(212,166,74,.16);pointer-events:none}
 .coach-card .portrait .ph{font-family:"Cinzel",serif;letter-spacing:.32em;color:var(--gold-3);font-size:.78rem;z-index:1;font-weight:700}
-.coach-card .portrait .tag{position:absolute;top:18px;left:18px;background:var(--gold-grad);color:#0a0907;font-family:"Cinzel",serif;letter-spacing:.16em;font-size:.66rem;padding:5px 10px;text-transform:uppercase;z-index:1;font-weight:700}
+.coach-card .portrait .tag{position:absolute;top:18px;left:18px;background:var(--gold);color:#0a0907;font-family:"Cinzel",serif;letter-spacing:.16em;font-size:.66rem;padding:5px 10px;text-transform:uppercase;z-index:1;font-weight:700}
 .coach-card .portrait .lvl{position:absolute;top:18px;right:18px;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.22em;font-size:.7rem;z-index:1;font-weight:700}
 
 .coach-card .meta{padding:26px 26px 28px;display:flex;flex-direction:column;gap:12px}
 .coach-card .meta .who{font-family:"Cinzel",serif;color:var(--gold-2);letter-spacing:.28em;font-size:.72rem;text-transform:uppercase;font-weight:700}
 .coach-card .meta h2{font-size:1.7rem;font-family:"Cinzel",serif;letter-spacing:.04em;line-height:1.15}
-.coach-card .meta h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.coach-card .meta h2 .gold{color:var(--gold-2)}
 .coach-card .meta .role{color:var(--muted);font-size:.86rem;font-family:"Oswald",sans-serif;letter-spacing:.04em;line-height:1.5}
 .coach-card .meta .bio{color:var(--text-soft);font-size:.94rem;line-height:1.75}
 .coach-card .meta .bio p{margin-bottom:8px}
 .coach-card .meta .bio strong{color:var(--gold-2);font-weight:700}
 .coach-card .meta .chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:4px}
-.coach-card .meta .chip{border:1px solid var(--line-2);padding:6px 11px;font-size:.72rem;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.14em;background:rgba(212,166,74,.04);font-weight:700}
+.coach-card .meta .chip{border:1px solid var(--line-2);padding:6px 11px;font-size:.72rem;color:var(--gold-2);font-family:"Cinzel",serif;letter-spacing:.14em;font-weight:700}
 .coach-card .meta .quote{border-left:3px solid var(--gold);padding:8px 0 8px 18px;color:var(--text);font-size:.96rem;font-style:italic;line-height:1.55;margin-top:6px;position:relative}
 .coach-card .meta .quote::before{content:"\201C";position:absolute;left:12px;top:-10px;color:var(--gold);font-size:2.4rem;font-family:"Cinzel",serif;opacity:.35}
 
-.coach-cta{padding:88px 0;text-align:center;background:linear-gradient(180deg,#0a0907,#1a1108);position:relative;overflow:hidden}
-.coach-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(closest-side at 50% 50%,rgba(212,166,74,.14),transparent 60%);pointer-events:none}
-.coach-cta .shell{position:relative;z-index:1}
-.coach-cta h2 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.coach-cta{padding:88px 0;text-align:center;background:var(--bg-2);border-top:1px solid var(--line)}
+.coach-cta h2 .gold{color:var(--gold-2)}
 .coach-cta p{color:var(--text-soft);margin:18px auto 32px;max-width:540px}
 
 @media (max-width:920px){
