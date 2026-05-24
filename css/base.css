@@ -37,6 +37,17 @@ p{color:var(--text-soft)}
 
 .topbar{position:sticky;top:0;z-index:50;background:rgba(10,9,7,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--gold-3)}
 .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.topbar-actions{display:flex;align-items:center;gap:16px}
+.topbar-actions .topnav{order:1}
+.topbar-actions .lang-toggle{order:2}
+.topbar-actions .nav-toggle{order:3}
+
+.lang-toggle{display:inline-flex;align-items:center;justify-content:center;height:34px;min-width:54px;padding:0 12px;border:1px solid var(--gold-3);background:transparent;color:var(--gold-2);font-family:"Cinzel",serif;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:border-color .2s var(--ease),background .2s var(--ease),color .2s var(--ease);flex-shrink:0;font-weight:700;line-height:1}
+.lang-toggle:hover{border-color:var(--gold-2);background:rgba(212,166,74,.08)}
+.lang-toggle:focus-visible{outline:1px solid var(--gold-2);outline-offset:2px}
+
+html:not([lang="en"]) [lang="en"]{display:none!important}
+html[lang="en"] [lang="zh"]{display:none!important}
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-text .en{font-family:"Cinzel",serif;font-weight:900;font-size:1.1rem;letter-spacing:.18em;color:var(--gold-2);white-space:nowrap}

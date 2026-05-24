@@ -31,9 +31,25 @@
     });
   }
 
+  function initLang(){
+    const btn = document.querySelector('.lang-toggle');
+    if(!btn) return;
+    const html = document.documentElement;
+    const apply = (lang)=>{
+      html.setAttribute('lang', lang);
+      try{ localStorage.setItem('site.lang', lang); }catch(e){}
+      btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换到中文');
+    };
+    btn.addEventListener('click', ()=>{
+      const cur = html.getAttribute('lang') === 'en' ? 'en' : 'zh';
+      apply(cur === 'zh' ? 'en' : 'zh');
+    });
+  }
+
+  function start(){ initNav(); initLang(); }
   if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initNav);
+    document.addEventListener('DOMContentLoaded', start);
   } else {
-    initNav();
+    start();
   }
 })();

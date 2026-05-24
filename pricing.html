@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(function(){try{var l=localStorage.getItem('site.lang');if(l==='en'||l==='zh')document.documentElement.setAttribute('lang',l)}catch(e){}})();</script>
 <title>价格表 · Elephant Muay Thai</title>
 <link rel="icon" type="image/svg+xml" href="assets/elephant-logo.svg">
-<link rel="stylesheet" href="css/base.css?v=2">
+<link rel="stylesheet" href="css/base.css?v=3">
 <link rel="stylesheet" href="css/punch.css">
 <link rel="stylesheet" href="css/pricing.css">
 </head>
@@ -18,30 +19,33 @@
         <span class="zh">MUAY · THAI</span>
       </span>
     </a>
-    <button class="nav-toggle" type="button" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="topnav">
-      <a href="about.html">简介</a>
-      <a href="pricing.html" class="active">价格表</a>
-      <a href="coaches.html">教练</a>
-      <a href="contact.html">联系方式</a>
-    </nav>
+    <div class="topbar-actions">
+      <nav class="topnav">
+        <a href="about.html"><span lang="zh">简介</span><span lang="en">About</span></a>
+        <a href="pricing.html" class="active"><span lang="zh">价格表</span><span lang="en">Pricing</span></a>
+        <a href="coaches.html"><span lang="zh">教练</span><span lang="en">Coaches</span></a>
+        <a href="contact.html"><span lang="zh">联系方式</span><span lang="en">Contact</span></a>
+      </nav>
+      <button class="lang-toggle" type="button" aria-label="切换到 English"><span lang="zh">EN</span><span lang="en">中文</span></button>
+      <button class="nav-toggle" type="button" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <section class="page-head">
   <div class="shell">
     <div class="eyebrow">PRICING</div>
-    <h1>主标题<span class="gold">占位</span><br>副标题<span class="gold">占位</span></h1>
-    <p class="lede">页面引言占位 · 此处由馆方填写价格板块的开场说明，例如收费理念、试课政策等关键信息。</p>
+    <h1><span lang="zh">主标题<span class="gold">占位</span><br>副标题<span class="gold">占位</span></span><span lang="en">Heading <span class="gold">placeholder</span><br>Subheading <span class="gold">placeholder</span></span></h1>
+    <p class="lede"><span lang="zh">页面引言占位 · 此处由馆方填写价格板块的开场说明，例如收费理念、试课政策等关键信息。</span><span lang="en">Page lede placeholder · Opening text for the pricing section. Cover pricing philosophy, trial policy and other key info.</span></p>
   </div>
 </section>
 
 <section class="price-tabs">
   <div class="shell">
     <div class="pills">
-      <button class="on">团课 / GROUP</button>
-      <button>私教 / PRIVATE</button>
-      <button>青少年 / KIDS</button>
+      <button class="on"><span lang="zh">团课 / GROUP</span><span lang="en">GROUP</span></button>
+      <button><span lang="zh">私教 / PRIVATE</span><span lang="en">PRIVATE</span></button>
+      <button><span lang="zh">青少年 / KIDS</span><span lang="en">KIDS</span></button>
     </div>
   </div>
 </section>
@@ -49,51 +53,51 @@
 <section class="price-grid">
   <div class="shell grid">
     <article class="price-card">
-      <h3>月卡</h3>
-      <p class="sub">套餐说明占位 · 一句话描述。</p>
-      <div class="price"><span class="cur">¥</span><span class="num">999</span><span class="per">/ 月</span></div>
+      <h3><span lang="zh">月卡</span><span lang="en">Monthly</span></h3>
+      <p class="sub"><span lang="zh">套餐说明占位 · 一句话描述。</span><span lang="en">Plan description placeholder · One-line summary.</span></p>
+      <div class="price"><span class="cur">¥</span><span class="num">999</span><span class="per"><span lang="zh">/ 月</span><span lang="en">/ mo</span></span></div>
       <ul>
-        <li>权益条目占位 1</li>
-        <li>权益条目占位 2</li>
-        <li>权益条目占位 3</li>
-        <li>权益条目占位 4</li>
-        <li>权益条目占位 5</li>
+        <li><span lang="zh">权益条目占位 1</span><span lang="en">Benefit placeholder 1</span></li>
+        <li><span lang="zh">权益条目占位 2</span><span lang="en">Benefit placeholder 2</span></li>
+        <li><span lang="zh">权益条目占位 3</span><span lang="en">Benefit placeholder 3</span></li>
+        <li><span lang="zh">权益条目占位 4</span><span lang="en">Benefit placeholder 4</span></li>
+        <li><span lang="zh">权益条目占位 5</span><span lang="en">Benefit placeholder 5</span></li>
       </ul>
       <div class="foot">
-        <a class="btn ghost" href="contact.html" data-punch-to="contact.html" data-punch="down">咨询办理</a>
+        <a class="btn ghost" href="contact.html" data-punch-to="contact.html" data-punch="down"><span lang="zh">咨询办理</span><span lang="en">Ask About It</span></a>
       </div>
     </article>
 
     <article class="price-card feat">
-      <span class="ribbon">推荐标签</span>
-      <h3>季卡</h3>
-      <p class="sub">套餐说明占位 · 一句话描述。</p>
-      <div class="price"><span class="cur">¥</span><span class="num">1999</span><span class="per">/ 9 个月</span></div>
+      <span class="ribbon"><span lang="zh">推荐标签</span><span lang="en">RECOMMENDED</span></span>
+      <h3><span lang="zh">季卡</span><span lang="en">Quarterly</span></h3>
+      <p class="sub"><span lang="zh">套餐说明占位 · 一句话描述。</span><span lang="en">Plan description placeholder · One-line summary.</span></p>
+      <div class="price"><span class="cur">¥</span><span class="num">1999</span><span class="per"><span lang="zh">/ 9 个月</span><span lang="en">/ 9 mo</span></span></div>
       <ul>
-        <li>权益条目占位 1</li>
-        <li>权益条目占位 2</li>
-        <li>权益条目占位 3</li>
-        <li>权益条目占位 4</li>
-        <li>权益条目占位 5</li>
+        <li><span lang="zh">权益条目占位 1</span><span lang="en">Benefit placeholder 1</span></li>
+        <li><span lang="zh">权益条目占位 2</span><span lang="en">Benefit placeholder 2</span></li>
+        <li><span lang="zh">权益条目占位 3</span><span lang="en">Benefit placeholder 3</span></li>
+        <li><span lang="zh">权益条目占位 4</span><span lang="en">Benefit placeholder 4</span></li>
+        <li><span lang="zh">权益条目占位 5</span><span lang="en">Benefit placeholder 5</span></li>
       </ul>
       <div class="foot">
-        <a class="btn" href="contact.html" data-punch-to="contact.html" data-punch="down">咨询办理 <span class="arrow">→</span></a>
+        <a class="btn" href="contact.html" data-punch-to="contact.html" data-punch="down"><span lang="zh">咨询办理</span><span lang="en">Ask About It</span> <span class="arrow">→</span></a>
       </div>
     </article>
 
     <article class="price-card">
-      <h3>年卡</h3>
-      <p class="sub">套餐说明占位 · 一句话描述。</p>
-      <div class="price"><span class="cur">¥</span><span class="num">9999</span><span class="per">/ 99 个月</span></div>
+      <h3><span lang="zh">年卡</span><span lang="en">Annual</span></h3>
+      <p class="sub"><span lang="zh">套餐说明占位 · 一句话描述。</span><span lang="en">Plan description placeholder · One-line summary.</span></p>
+      <div class="price"><span class="cur">¥</span><span class="num">9999</span><span class="per"><span lang="zh">/ 99 个月</span><span lang="en">/ 99 mo</span></span></div>
       <ul>
-        <li>权益条目占位 1</li>
-        <li>权益条目占位 2</li>
-        <li>权益条目占位 3</li>
-        <li>权益条目占位 4</li>
-        <li>权益条目占位 5</li>
+        <li><span lang="zh">权益条目占位 1</span><span lang="en">Benefit placeholder 1</span></li>
+        <li><span lang="zh">权益条目占位 2</span><span lang="en">Benefit placeholder 2</span></li>
+        <li><span lang="zh">权益条目占位 3</span><span lang="en">Benefit placeholder 3</span></li>
+        <li><span lang="zh">权益条目占位 4</span><span lang="en">Benefit placeholder 4</span></li>
+        <li><span lang="zh">权益条目占位 5</span><span lang="en">Benefit placeholder 5</span></li>
       </ul>
       <div class="foot">
-        <a class="btn ghost" href="contact.html" data-punch-to="contact.html" data-punch="down">咨询办理</a>
+        <a class="btn ghost" href="contact.html" data-punch-to="contact.html" data-punch="down"><span lang="zh">咨询办理</span><span lang="en">Ask About It</span></a>
       </div>
     </article>
   </div>
@@ -103,63 +107,63 @@
   <div class="shell">
     <div class="head">
       <div>
-        <span class="kbd-tag">私教 · 1 V 1</span>
-        <h2 style="margin-top:14px">私教标题占位<span class="gold"> · 占位</span></h2>
+        <span class="kbd-tag"><span lang="zh">私教 · 1 V 1</span><span lang="en">PRIVATE · 1-ON-1</span></span>
+        <h2 style="margin-top:14px"><span lang="zh">私教标题占位<span class="gold"> · 占位</span></span><span lang="en">Private heading placeholder<span class="gold"> · placeholder</span></span></h2>
       </div>
-      <p style="color:var(--text-soft);max-width:380px">私教说明占位 · 此处填写关于私教课程的简短说明。</p>
+      <p style="color:var(--text-soft);max-width:380px"><span lang="zh">私教说明占位 · 此处填写关于私教课程的简短说明。</span><span lang="en">Private session placeholder · Short description of private lessons.</span></p>
     </div>
     <div class="table">
-      <div class="row h"><div>段位</div><div>单节</div><div>9 节</div><div class="extra">99 节</div></div>
-      <div class="row"><div class="nm">段位占位 A</div><div class="px">¥ 999</div><div class="px">¥ 999</div><div class="extra px">¥ 9999</div></div>
-      <div class="row"><div class="nm">段位占位 B</div><div class="px">¥ 999</div><div class="px">¥ 999</div><div class="extra px">¥ 9999</div></div>
-      <div class="row"><div class="nm">段位占位 C</div><div class="px">¥ 999</div><div class="px">¥ 9999</div><div class="extra px">¥ 99999</div></div>
+      <div class="row h"><div><span lang="zh">段位</span><span lang="en">Tier</span></div><div><span lang="zh">单节</span><span lang="en">Single</span></div><div><span lang="zh">9 节</span><span lang="en">9-pack</span></div><div class="extra"><span lang="zh">99 节</span><span lang="en">99-pack</span></div></div>
+      <div class="row"><div class="nm"><span lang="zh">段位占位 A</span><span lang="en">Tier A placeholder</span></div><div class="px">¥ 999</div><div class="px">¥ 999</div><div class="extra px">¥ 9999</div></div>
+      <div class="row"><div class="nm"><span lang="zh">段位占位 B</span><span lang="en">Tier B placeholder</span></div><div class="px">¥ 999</div><div class="px">¥ 999</div><div class="extra px">¥ 9999</div></div>
+      <div class="row"><div class="nm"><span lang="zh">段位占位 C</span><span lang="en">Tier C placeholder</span></div><div class="px">¥ 999</div><div class="px">¥ 9999</div><div class="extra px">¥ 99999</div></div>
     </div>
   </div>
 </section>
 
 <section class="price-extras">
   <div class="shell">
-    <span class="kbd-tag">单次 / 装备 / 比赛</span>
-    <h2 style="margin-top:14px">板块标题<span class="gold">占位</span></h2>
+    <span class="kbd-tag"><span lang="zh">单次 / 装备 / 比赛</span><span lang="en">DROP-IN / GEAR / FIGHTS</span></span>
+    <h2 style="margin-top:14px"><span lang="zh">板块标题<span class="gold">占位</span></span><span lang="en">Section heading <span class="gold">placeholder</span></span></h2>
     <div class="grid">
-      <div class="ex"><div class="nm">项目占位 1</div><div class="px">¥ 99</div><div class="nt">项目说明占位 · 此处填写简短描述。</div></div>
-      <div class="ex"><div class="nm">项目占位 2</div><div class="px">¥ 99</div><div class="nt">项目说明占位 · 此处填写简短描述。</div></div>
-      <div class="ex"><div class="nm">项目占位 3</div><div class="px">¥ 99</div><div class="nt">项目说明占位 · 此处填写简短描述。</div></div>
-      <div class="ex"><div class="nm">项目占位 4</div><div class="px">¥ 999</div><div class="nt">项目说明占位 · 此处填写简短描述。</div></div>
-      <div class="ex"><div class="nm">项目占位 5</div><div class="px">¥ 999</div><div class="nt">项目说明占位 · 此处填写简短描述。</div></div>
-      <div class="ex"><div class="nm">项目占位 6</div><div class="px">¥ 9</div><div class="nt">项目说明占位 · 此处填写简短描述。</div></div>
+      <div class="ex"><div class="nm"><span lang="zh">项目占位 1</span><span lang="en">Item placeholder 1</span></div><div class="px">¥ 99</div><div class="nt"><span lang="zh">项目说明占位 · 此处填写简短描述。</span><span lang="en">Item description placeholder · Short description here.</span></div></div>
+      <div class="ex"><div class="nm"><span lang="zh">项目占位 2</span><span lang="en">Item placeholder 2</span></div><div class="px">¥ 99</div><div class="nt"><span lang="zh">项目说明占位 · 此处填写简短描述。</span><span lang="en">Item description placeholder · Short description here.</span></div></div>
+      <div class="ex"><div class="nm"><span lang="zh">项目占位 3</span><span lang="en">Item placeholder 3</span></div><div class="px">¥ 99</div><div class="nt"><span lang="zh">项目说明占位 · 此处填写简短描述。</span><span lang="en">Item description placeholder · Short description here.</span></div></div>
+      <div class="ex"><div class="nm"><span lang="zh">项目占位 4</span><span lang="en">Item placeholder 4</span></div><div class="px">¥ 999</div><div class="nt"><span lang="zh">项目说明占位 · 此处填写简短描述。</span><span lang="en">Item description placeholder · Short description here.</span></div></div>
+      <div class="ex"><div class="nm"><span lang="zh">项目占位 5</span><span lang="en">Item placeholder 5</span></div><div class="px">¥ 999</div><div class="nt"><span lang="zh">项目说明占位 · 此处填写简短描述。</span><span lang="en">Item description placeholder · Short description here.</span></div></div>
+      <div class="ex"><div class="nm"><span lang="zh">项目占位 6</span><span lang="en">Item placeholder 6</span></div><div class="px">¥ 9</div><div class="nt"><span lang="zh">项目说明占位 · 此处填写简短描述。</span><span lang="en">Item description placeholder · Short description here.</span></div></div>
     </div>
   </div>
 </section>
 
 <section class="price-faq">
   <div class="shell">
-    <span class="kbd-tag">常见问题 · FAQ</span>
-    <h2 style="margin:14px 0 4px">板块标题<span class="gold">占位</span></h2>
+    <span class="kbd-tag"><span lang="zh">常见问题 · FAQ</span><span lang="en">FAQ</span></span>
+    <h2 style="margin:14px 0 4px"><span lang="zh">板块标题<span class="gold">占位</span></span><span lang="en">Section heading <span class="gold">placeholder</span></span></h2>
     <div class="grid">
       <details open>
-        <summary>问题占位 1 · 问题文字</summary>
-        <p>答案占位 · 此处由馆方填写本问题的回答内容。</p>
+        <summary><span lang="zh">问题占位 1 · 问题文字</span><span lang="en">Question placeholder 1 · question text</span></summary>
+        <p><span lang="zh">答案占位 · 此处由馆方填写本问题的回答内容。</span><span lang="en">Answer placeholder · Filled in by the gym.</span></p>
       </details>
       <details>
-        <summary>问题占位 2 · 问题文字</summary>
-        <p>答案占位 · 此处由馆方填写本问题的回答内容。</p>
+        <summary><span lang="zh">问题占位 2 · 问题文字</span><span lang="en">Question placeholder 2 · question text</span></summary>
+        <p><span lang="zh">答案占位 · 此处由馆方填写本问题的回答内容。</span><span lang="en">Answer placeholder · Filled in by the gym.</span></p>
       </details>
       <details>
-        <summary>问题占位 3 · 问题文字</summary>
-        <p>答案占位 · 此处由馆方填写本问题的回答内容。</p>
+        <summary><span lang="zh">问题占位 3 · 问题文字</span><span lang="en">Question placeholder 3 · question text</span></summary>
+        <p><span lang="zh">答案占位 · 此处由馆方填写本问题的回答内容。</span><span lang="en">Answer placeholder · Filled in by the gym.</span></p>
       </details>
       <details>
-        <summary>问题占位 4 · 问题文字</summary>
-        <p>答案占位 · 此处由馆方填写本问题的回答内容。</p>
+        <summary><span lang="zh">问题占位 4 · 问题文字</span><span lang="en">Question placeholder 4 · question text</span></summary>
+        <p><span lang="zh">答案占位 · 此处由馆方填写本问题的回答内容。</span><span lang="en">Answer placeholder · Filled in by the gym.</span></p>
       </details>
       <details>
-        <summary>问题占位 5 · 问题文字</summary>
-        <p>答案占位 · 此处由馆方填写本问题的回答内容。</p>
+        <summary><span lang="zh">问题占位 5 · 问题文字</span><span lang="en">Question placeholder 5 · question text</span></summary>
+        <p><span lang="zh">答案占位 · 此处由馆方填写本问题的回答内容。</span><span lang="en">Answer placeholder · Filled in by the gym.</span></p>
       </details>
       <details>
-        <summary>问题占位 6 · 问题文字</summary>
-        <p>答案占位 · 此处由馆方填写本问题的回答内容。</p>
+        <summary><span lang="zh">问题占位 6 · 问题文字</span><span lang="en">Question placeholder 6 · question text</span></summary>
+        <p><span lang="zh">答案占位 · 此处由馆方填写本问题的回答内容。</span><span lang="en">Answer placeholder · Filled in by the gym.</span></p>
       </details>
     </div>
   </div>
@@ -171,23 +175,23 @@
       <div>
         <div class="footer-brand">
           <h4 style="margin-bottom:6px">ELEPHANT MUAY THAI</h4>
-          <p>象 · 泰拳馆<br>品牌标语占位 · BRAND TAGLINE</p>
+          <p><span lang="zh">象 · 泰拳馆<br>品牌标语占位 · BRAND TAGLINE</span><span lang="en">Elephant Muay Thai · Toronto<br>Brand tagline placeholder · BRAND TAGLINE</span></p>
         </div>
       </div>
       <div>
-        <h4>导航</h4>
-        <a href="index.html">主页</a>
-        <a href="about.html">简介</a>
-        <a href="coaches.html">教练</a>
-        <a href="contact.html">联系方式</a>
+        <h4><span lang="zh">导航</span><span lang="en">Navigation</span></h4>
+        <a href="index.html"><span lang="zh">主页</span><span lang="en">Home</span></a>
+        <a href="about.html"><span lang="zh">简介</span><span lang="en">About</span></a>
+        <a href="coaches.html"><span lang="zh">教练</span><span lang="en">Coaches</span></a>
+        <a href="contact.html"><span lang="zh">联系方式</span><span lang="en">Contact</span></a>
       </div>
       <div>
-        <h4>位置</h4>
-        <p>180 Duncan Mill Rd · Unit 503<br>North York · Toronto · ON<br>周一至五 09:00 – 21:00</p>
+        <h4><span lang="zh">位置</span><span lang="en">Location</span></h4>
+        <p>180 Duncan Mill Rd · Unit 503<br>North York · Toronto · ON<br><span lang="zh">周一至五 09:00 – 21:00</span><span lang="en">Mon–Fri 09:00 – 21:00</span></p>
       </div>
       <div>
-        <h4>联系</h4>
-        <p>(647) 831-1781<br>WeChat: 微信号占位</p>
+        <h4><span lang="zh">联系</span><span lang="en">Contact</span></h4>
+        <p>(647) 831-1781<br><span lang="zh">WeChat: 微信号占位</span><span lang="en">WeChat: handle placeholder</span></p>
         <div class="socials">
           <a href="https://www.instagram.com/elephant_muay_thai/" target="_blank" rel="noopener">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>
@@ -202,7 +206,7 @@
     </div>
     <div class="footer-bottom">
       <div>© 2026 Elephant Muay Thai. All rights reserved.</div>
-      <div>页脚标语占位 · FOOTER TAGLINE</div>
+      <div><span lang="zh">页脚标语占位 · FOOTER TAGLINE</span><span lang="en">Footer tagline placeholder · FOOTER TAGLINE</span></div>
     </div>
   </div>
 </footer>

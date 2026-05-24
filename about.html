@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(function(){try{var l=localStorage.getItem('site.lang');if(l==='en'||l==='zh')document.documentElement.setAttribute('lang',l)}catch(e){}})();</script>
 <title>简介 · Elephant Muay Thai</title>
 <link rel="icon" type="image/svg+xml" href="assets/elephant-logo.svg">
-<link rel="stylesheet" href="css/base.css?v=2">
+<link rel="stylesheet" href="css/base.css?v=3">
 <link rel="stylesheet" href="css/punch.css">
 <link rel="stylesheet" href="css/about.css?v=2">
 </head>
@@ -18,45 +19,48 @@
         <span class="zh">MUAY · THAI</span>
       </span>
     </a>
-    <button class="nav-toggle" type="button" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="topnav">
-      <a href="about.html" class="active">简介</a>
-      <a href="pricing.html">价格表</a>
-      <a href="coaches.html">教练</a>
-      <a href="contact.html">联系方式</a>
-    </nav>
+    <div class="topbar-actions">
+      <nav class="topnav">
+        <a href="about.html" class="active"><span lang="zh">简介</span><span lang="en">About</span></a>
+        <a href="pricing.html"><span lang="zh">价格表</span><span lang="en">Pricing</span></a>
+        <a href="coaches.html"><span lang="zh">教练</span><span lang="en">Coaches</span></a>
+        <a href="contact.html"><span lang="zh">联系方式</span><span lang="en">Contact</span></a>
+      </nav>
+      <button class="lang-toggle" type="button" aria-label="切换到 English"><span lang="zh">EN</span><span lang="en">中文</span></button>
+      <button class="nav-toggle" type="button" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <section class="page-head">
   <div class="shell">
     <div class="eyebrow">ABOUT</div>
-    <h1>主标题<span class="gold">占位</span><br>副标题<span class="gold">占位</span></h1>
-    <p class="lede">页面引言占位 · 此处由馆方填写一句概括性的开场文字，长度建议在两到三行之间。</p>
+    <h1><span lang="zh">主标题<span class="gold">占位</span><br>副标题<span class="gold">占位</span></span><span lang="en">Heading <span class="gold">placeholder</span><br>Subheading <span class="gold">placeholder</span></span></h1>
+    <p class="lede"><span lang="zh">页面引言占位 · 此处由馆方填写一句概括性的开场文字，长度建议在两到三行之间。</span><span lang="en">Page lede placeholder · One opening line to be written by the gym. Two to three lines works best.</span></p>
   </div>
 </section>
 
 <section class="about-story">
   <div class="shell grid">
     <div>
-      <h2 style="margin-bottom:20px">段落标题 <span class="gold">占位</span></h2>
-      <p>段落占位 · 此处由馆方填写实际内容。可介绍品牌由来、核心理念或本馆的定位。占位文本仅用于演示版式效果。</p>
-      <p>段落占位 · 此处由馆方填写实际内容。可介绍馆主或创办者的师承背景、流派来源、训练经历等关键信息。</p>
-      <p>段落占位 · 此处由馆方填写实际内容。可介绍开馆历程、发展节点、阶段性成果等。</p>
-      <p>段落占位 · 此处由馆方填写实际内容。可介绍经营态度、对学员的承诺、与同行的差异等。</p>
-      <p>段落占位 · 此处由馆方填写实际内容。可总结训练理念或对学员的一句寄语。</p>
+      <h2 style="margin-bottom:20px"><span lang="zh">段落标题 <span class="gold">占位</span></span><span lang="en">Section heading <span class="gold">placeholder</span></span></h2>
+      <p><span lang="zh">段落占位 · 此处由馆方填写实际内容。可介绍品牌由来、核心理念或本馆的定位。占位文本仅用于演示版式效果。</span><span lang="en">Paragraph placeholder · To be filled in by the gym. Cover the brand origin, core philosophy or positioning. Demo text only.</span></p>
+      <p><span lang="zh">段落占位 · 此处由馆方填写实际内容。可介绍馆主或创办者的师承背景、流派来源、训练经历等关键信息。</span><span lang="en">Paragraph placeholder · To be filled in by the gym. Describe the founder's lineage, training background and influences.</span></p>
+      <p><span lang="zh">段落占位 · 此处由馆方填写实际内容。可介绍开馆历程、发展节点、阶段性成果等。</span><span lang="en">Paragraph placeholder · To be filled in by the gym. Talk about how the gym started, milestones and key moments.</span></p>
+      <p><span lang="zh">段落占位 · 此处由馆方填写实际内容。可介绍经营态度、对学员的承诺、与同行的差异等。</span><span lang="en">Paragraph placeholder · To be filled in by the gym. Outline the approach, promises to students and what sets the gym apart.</span></p>
+      <p><span lang="zh">段落占位 · 此处由馆方填写实际内容。可总结训练理念或对学员的一句寄语。</span><span lang="en">Paragraph placeholder · To be filled in by the gym. Close with the training philosophy or a message to students.</span></p>
     </div>
     <aside class="side">
-      <h3>馆 · INFO</h3>
-      <div class="row"><span>馆龄</span><span>9 YR</span></div>
-      <div class="row"><span>面积</span><span>999 ㎡</span></div>
-      <div class="row"><span>拳台</span><span>9 / Standard</span></div>
-      <div class="row"><span>沙袋</span><span>99 个</span></div>
-      <div class="row"><span>更衣室</span><span>男 / 女</span></div>
-      <div class="row"><span>淋浴位</span><span>9</span></div>
-      <div class="row"><span>常驻教练</span><span>99</span></div>
-      <div class="row"><span>团课 / 周</span><span>99 节</span></div>
-      <div class="row"><span>营业时间</span><span>09 – 21</span></div>
+      <h3><span lang="zh">馆 · INFO</span><span lang="en">GYM · INFO</span></h3>
+      <div class="row"><span><span lang="zh">馆龄</span><span lang="en">Age</span></span><span>9 YR</span></div>
+      <div class="row"><span><span lang="zh">面积</span><span lang="en">Area</span></span><span>999 ㎡</span></div>
+      <div class="row"><span><span lang="zh">拳台</span><span lang="en">Ring</span></span><span>9 / Standard</span></div>
+      <div class="row"><span><span lang="zh">沙袋</span><span lang="en">Bags</span></span><span><span lang="zh">99 个</span><span lang="en">99</span></span></div>
+      <div class="row"><span><span lang="zh">更衣室</span><span lang="en">Changing</span></span><span><span lang="zh">男 / 女</span><span lang="en">M / F</span></span></div>
+      <div class="row"><span><span lang="zh">淋浴位</span><span lang="en">Showers</span></span><span>9</span></div>
+      <div class="row"><span><span lang="zh">常驻教练</span><span lang="en">Coaches</span></span><span>99</span></div>
+      <div class="row"><span><span lang="zh">团课 / 周</span><span lang="en">Classes / wk</span></span><span><span lang="zh">99 节</span><span lang="en">99</span></span></div>
+      <div class="row"><span><span lang="zh">营业时间</span><span lang="en">Hours</span></span><span>09 – 21</span></div>
     </aside>
   </div>
 </section>
@@ -64,10 +68,10 @@
 <section class="about-numbers">
   <div class="shell">
     <div class="grid">
-      <div class="stat"><div class="n">2026</div><div class="l">EST. / 开馆元年</div></div>
-      <div class="stat"><div class="n">9999+</div><div class="l">学员人次</div></div>
-      <div class="stat"><div class="n">999</div><div class="l">参赛人次</div></div>
-      <div class="stat"><div class="n">9</div><div class="l">数据项占位</div></div>
+      <div class="stat"><div class="n">2026</div><div class="l"><span lang="zh">EST. / 开馆元年</span><span lang="en">EST. / Founded</span></div></div>
+      <div class="stat"><div class="n">9999+</div><div class="l"><span lang="zh">学员人次</span><span lang="en">Members</span></div></div>
+      <div class="stat"><div class="n">999</div><div class="l"><span lang="zh">参赛人次</span><span lang="en">Fights</span></div></div>
+      <div class="stat"><div class="n">9</div><div class="l"><span lang="zh">数据项占位</span><span lang="en">Stat placeholder</span></div></div>
     </div>
   </div>
 </section>
@@ -76,29 +80,29 @@
   <div class="shell grid">
     <div class="gallery">
       <figure class="g-main">
-        <img src="assets/photo-hall.jpg" alt="拳馆主区，定制沙袋与标准拳台" loading="lazy">
-        <figcaption><span>拳馆主区</span><em>MUAY THAI HALL</em></figcaption>
+        <img src="assets/photo-hall.jpg" alt="拳馆主区，定制沙袋与标准拳台 · Main hall, custom bags and standard ring" loading="lazy">
+        <figcaption><span><span lang="zh">拳馆主区</span><span lang="en">Main Hall</span></span><em>MUAY THAI HALL</em></figcaption>
       </figure>
       <figure class="g-sub">
-        <img src="assets/photo-weights.jpg" alt="XMASTER 哑铃力量训练区" loading="lazy">
-        <figcaption><span>力量区</span><em>STRENGTH</em></figcaption>
+        <img src="assets/photo-weights.jpg" alt="XMASTER 哑铃力量训练区 · Free-weight training area" loading="lazy">
+        <figcaption><span><span lang="zh">力量区</span><span lang="en">Strength</span></span><em>STRENGTH</em></figcaption>
       </figure>
       <figure class="g-sub">
-        <img src="assets/photo-strength.jpg" alt="综合器械区" loading="lazy">
-        <figcaption><span>器械</span><em>EQUIPMENT</em></figcaption>
+        <img src="assets/photo-strength.jpg" alt="综合器械区 · Equipment area" loading="lazy">
+        <figcaption><span><span lang="zh">器械</span><span lang="en">Equipment</span></span><em>EQUIPMENT</em></figcaption>
       </figure>
     </div>
     <div>
-      <span class="kbd-tag">馆内 · INSIDE</span>
-      <h2 style="margin:14px 0 22px">你会<span style="color:var(--gold-2)">看到什么</span></h2>
+      <span class="kbd-tag"><span lang="zh">馆内 · INSIDE</span><span lang="en">INSIDE</span></span>
+      <h2 style="margin:14px 0 22px"><span lang="zh">你会<span style="color:var(--gold-2)">看到什么</span></span><span lang="en">What you'll <span style="color:var(--gold-2)">see inside</span></span></h2>
       <ul>
-        <li>条目占位 · 此处填写馆内设施要点 1。</li>
-        <li>条目占位 · 此处填写馆内设施要点 2。</li>
-        <li>条目占位 · 此处填写馆内设施要点 3。</li>
-        <li>条目占位 · 此处填写馆内设施要点 4。</li>
-        <li>条目占位 · 此处填写馆内设施要点 5。</li>
-        <li>条目占位 · 此处填写馆内设施要点 6。</li>
-        <li>条目占位 · 此处填写馆内设施要点 7。</li>
+        <li><span lang="zh">条目占位 · 此处填写馆内设施要点 1。</span><span lang="en">List placeholder · Facility highlight 1 to be written.</span></li>
+        <li><span lang="zh">条目占位 · 此处填写馆内设施要点 2。</span><span lang="en">List placeholder · Facility highlight 2 to be written.</span></li>
+        <li><span lang="zh">条目占位 · 此处填写馆内设施要点 3。</span><span lang="en">List placeholder · Facility highlight 3 to be written.</span></li>
+        <li><span lang="zh">条目占位 · 此处填写馆内设施要点 4。</span><span lang="en">List placeholder · Facility highlight 4 to be written.</span></li>
+        <li><span lang="zh">条目占位 · 此处填写馆内设施要点 5。</span><span lang="en">List placeholder · Facility highlight 5 to be written.</span></li>
+        <li><span lang="zh">条目占位 · 此处填写馆内设施要点 6。</span><span lang="en">List placeholder · Facility highlight 6 to be written.</span></li>
+        <li><span lang="zh">条目占位 · 此处填写馆内设施要点 7。</span><span lang="en">List placeholder · Facility highlight 7 to be written.</span></li>
       </ul>
     </div>
   </div>
@@ -106,16 +110,16 @@
 
 <section class="philosophy-quote">
   <div class="shell">
-    <div class="q">"引用语占位 · 此处填写一句精炼的<span class="gold">座右铭</span>或本馆的<span class="gold">训练格言</span>。"</div>
-    <div class="auth">— 引用来源占位</div>
+    <div class="q"><span lang="zh">"引用语占位 · 此处填写一句精炼的<span class="gold">座右铭</span>或本馆的<span class="gold">训练格言</span>。"</span><span lang="en">"Quote placeholder · A short <span class="gold">motto</span> or <span class="gold">training creed</span> to be written."</span></div>
+    <div class="auth"><span lang="zh">— 引用来源占位</span><span lang="en">— Attribution placeholder</span></div>
   </div>
 </section>
 
 <section class="about-cta">
   <div class="shell">
-    <h2>行动号召标题占位<br><span class="gold">副标题占位</span></h2>
-    <p style="color:var(--text-soft);margin:18px 0 28px;max-width:520px;margin-left:auto;margin-right:auto">说明文字占位 · 此处填写预约或到访说明。</p>
-    <a class="btn" href="contact.html" data-punch-to="contact.html" data-punch="down">联系我们 <span class="arrow">→</span></a>
+    <h2><span lang="zh">行动号召标题占位<br><span class="gold">副标题占位</span></span><span lang="en">Call-to-action heading placeholder<br><span class="gold">Subheading placeholder</span></span></h2>
+    <p style="color:var(--text-soft);margin:18px 0 28px;max-width:520px;margin-left:auto;margin-right:auto"><span lang="zh">说明文字占位 · 此处填写预约或到访说明。</span><span lang="en">Description placeholder · Booking or drop-in info to be written.</span></p>
+    <a class="btn" href="contact.html" data-punch-to="contact.html" data-punch="down"><span lang="zh">联系我们</span><span lang="en">Contact Us</span> <span class="arrow">→</span></a>
   </div>
 </section>
 
@@ -125,23 +129,23 @@
       <div>
         <div class="footer-brand">
           <h4 style="margin-bottom:6px">ELEPHANT MUAY THAI</h4>
-          <p>象 · 泰拳馆<br>品牌标语占位 · BRAND TAGLINE</p>
+          <p><span lang="zh">象 · 泰拳馆<br>品牌标语占位 · BRAND TAGLINE</span><span lang="en">Elephant Muay Thai · Toronto<br>Brand tagline placeholder · BRAND TAGLINE</span></p>
         </div>
       </div>
       <div>
-        <h4>导航</h4>
-        <a href="index.html">主页</a>
-        <a href="pricing.html">价格表</a>
-        <a href="coaches.html">教练</a>
-        <a href="contact.html">联系方式</a>
+        <h4><span lang="zh">导航</span><span lang="en">Navigation</span></h4>
+        <a href="index.html"><span lang="zh">主页</span><span lang="en">Home</span></a>
+        <a href="pricing.html"><span lang="zh">价格表</span><span lang="en">Pricing</span></a>
+        <a href="coaches.html"><span lang="zh">教练</span><span lang="en">Coaches</span></a>
+        <a href="contact.html"><span lang="zh">联系方式</span><span lang="en">Contact</span></a>
       </div>
       <div>
-        <h4>位置</h4>
-        <p>180 Duncan Mill Rd · Unit 503<br>North York · Toronto · ON<br>周一至五 09:00 – 21:00</p>
+        <h4><span lang="zh">位置</span><span lang="en">Location</span></h4>
+        <p>180 Duncan Mill Rd · Unit 503<br>North York · Toronto · ON<br><span lang="zh">周一至五 09:00 – 21:00</span><span lang="en">Mon–Fri 09:00 – 21:00</span></p>
       </div>
       <div>
-        <h4>联系</h4>
-        <p>(647) 831-1781<br>WeChat: 微信号占位</p>
+        <h4><span lang="zh">联系</span><span lang="en">Contact</span></h4>
+        <p>(647) 831-1781<br><span lang="zh">WeChat: 微信号占位</span><span lang="en">WeChat: handle placeholder</span></p>
         <div class="socials">
           <a href="https://www.instagram.com/elephant_muay_thai/" target="_blank" rel="noopener">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>
@@ -156,7 +160,7 @@
     </div>
     <div class="footer-bottom">
       <div>© 2026 Elephant Muay Thai. All rights reserved.</div>
-      <div>页脚标语占位 · FOOTER TAGLINE</div>
+      <div><span lang="zh">页脚标语占位 · FOOTER TAGLINE</span><span lang="en">Footer tagline placeholder · FOOTER TAGLINE</span></div>
     </div>
   </div>
 </footer>
