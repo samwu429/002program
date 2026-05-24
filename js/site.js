@@ -32,18 +32,24 @@
   }
 
   function initLang(){
-    const btn = document.querySelector('.lang-toggle');
+    const btn = document.querySelector('.lang-switch');
     if(!btn) return;
     const html = document.documentElement;
+    const sync = ()=>{
+      const cur = html.getAttribute('lang') === 'zh' ? 'zh' : 'en';
+      btn.setAttribute('aria-checked', String(cur === 'zh'));
+      btn.setAttribute('aria-label', cur === 'en' ? 'Switch language · 切换到中文' : 'Switch language · Switch to English');
+    };
     const apply = (lang)=>{
       html.setAttribute('lang', lang);
       try{ localStorage.setItem('site.lang', lang); }catch(e){}
-      btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换到中文');
+      sync();
     };
     btn.addEventListener('click', ()=>{
-      const cur = html.getAttribute('lang') === 'en' ? 'en' : 'zh';
-      apply(cur === 'zh' ? 'en' : 'zh');
+      const cur = html.getAttribute('lang') === 'zh' ? 'zh' : 'en';
+      apply(cur === 'en' ? 'zh' : 'en');
     });
+    sync();
   }
 
   function start(){ initNav(); initLang(); }

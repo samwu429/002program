@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="zh">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<script>(function(){try{var l=localStorage.getItem('site.lang');if(l==='en'||l==='zh')document.documentElement.setAttribute('lang',l)}catch(e){}})();</script>
+<script>(function(){try{var l=localStorage.getItem('site.lang');document.documentElement.setAttribute('lang',l==='zh'?'zh':'en')}catch(e){}})();</script>
 <title>价格表 · Elephant Muay Thai</title>
 <link rel="icon" type="image/svg+xml" href="assets/elephant-logo.svg">
-<link rel="stylesheet" href="css/base.css?v=3">
+<link rel="stylesheet" href="css/base.css?v=4">
 <link rel="stylesheet" href="css/punch.css">
 <link rel="stylesheet" href="css/pricing.css">
 </head>
@@ -26,7 +26,10 @@
         <a href="coaches.html"><span lang="zh">教练</span><span lang="en">Coaches</span></a>
         <a href="contact.html"><span lang="zh">联系方式</span><span lang="en">Contact</span></a>
       </nav>
-      <button class="lang-toggle" type="button" aria-label="切换到 English"><span lang="zh">EN</span><span lang="en">中文</span></button>
+      <button class="lang-switch" type="button" role="switch" aria-checked="false" aria-label="Switch language · 切换到中文">
+        <span class="lang-opt opt-en">EN</span>
+        <span class="lang-opt opt-zh">中</span>
+      </button>
       <button class="nav-toggle" type="button" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
