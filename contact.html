@@ -7,7 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/elephant-logo.svg">
 <link rel="stylesheet" href="css/base.css?v=2">
 <link rel="stylesheet" href="css/punch.css">
-<link rel="stylesheet" href="css/contact.css?v=2">
+<link rel="stylesheet" href="css/contact.css?v=3">
 </head>
 <body>
 <header class="topbar">
@@ -104,18 +104,16 @@
   <div class="shell">
     <span class="kbd-tag">位置 · LOCATION</span>
     <h2 style="margin:14px 0 22px">就在 <span style="color:var(--gold-2)">这。</span></h2>
-    <a class="map-link" href="https://maps.app.goo.gl/3ECRABLXLd2pz4qA6" target="_blank" rel="noopener" aria-label="在 Google Maps 中查看 Elephant Muay Thai 位置">
-      <div class="map-shell" aria-hidden="true">
-        <div class="gridbg"></div>
-        <div class="road"></div>
-        <div class="road v"></div>
-        <div class="compass">N · E<br>S · W</div>
-        <div class="legend">[ 点击在 Google Maps 中打开 ↗ ]</div>
-        <div class="pin">
-          <span class="lbl">ELEPHANT · DUNCAN MILL</span>
-          <span class="dot"></span>
-        </div>
-      </div>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps?q=Elephant+Muay+Thai+180+Duncan+Mill+Rd+North+York+ON&hl=zh-CN&z=16&output=embed"
+        title="Elephant Muay Thai · 位置地图"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+    <a class="map-open" href="https://maps.app.goo.gl/3ECRABLXLd2pz4qA6" target="_blank" rel="noopener">
+      在 Google Maps 中打开 <span class="arr">↗</span>
     </a>
   </div>
 </section>
