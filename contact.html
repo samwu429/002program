@@ -7,7 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/elephant-logo.svg">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/punch.css">
-<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/contact.css?v=2">
 </head>
 <body>
 <header class="topbar">
@@ -40,15 +40,21 @@
   <div class="shell grid">
     <div class="contact-card">
       <div class="label">地址 · ADDRESS</div>
-      <h2>180 Duncan Mill Rd · Unit 503</h2>
+      <h2><a class="ext-link" href="https://www.google.com/maps/place/Elephant+Muay+Thai/@43.7624476,-79.3543708,17z/data=!4m6!3m5!1s0x89d4d3149a5b15ab:0xd0203943fc3ed20e!8m2!3d43.7624476!4d-79.3543708" target="_blank" rel="noopener">180 Duncan Mill Rd · Unit 503<span class="arr">↗</span></a></h2>
       <p>到店指引占位 · 此处填写最近的地铁站、停车信息、门面识别要点等。</p>
       <div class="big">North York · Toronto · ON M3B 1Z6</div>
+      <a class="map-cta" href="https://www.google.com/maps/place/Elephant+Muay+Thai/@43.7624476,-79.3543708,17z/data=!4m6!3m5!1s0x89d4d3149a5b15ab:0xd0203943fc3ed20e!8m2!3d43.7624476!4d-79.3543708" target="_blank" rel="noopener">在 Google Maps 中打开 →</a>
     </div>
 
     <div class="contact-card">
-      <div class="label">电话 / 微信 · CONTACT</div>
+      <div class="label">电话 / 社交 · CONTACT</div>
       <h2>问什么都行<br>不一定要办卡才打</h2>
-      <div class="big">电话 · (647) 831-1781</div>
+      <div class="big">电话 · <a class="ext-link inline" href="tel:+16478311781">(647) 831-1781</a></div>
+      <a class="social-row" href="https://www.instagram.com/elephant_muay_thai/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>
+        <span class="handle">Instagram · @elephant_muay_thai</span>
+        <span class="arr">↗</span>
+      </a>
       <div class="bigger">微信 · 微信号占位</div>
       <div class="qr">
         <div class="img" aria-label="微信二维码占位">
@@ -94,21 +100,23 @@
   </div>
 </section>
 
-<section class="map-block">
+<section class="map-block" id="map-anchor">
   <div class="shell">
     <span class="kbd-tag">位置 · LOCATION</span>
-    <h2 style="margin:14px 0 22px">板块标题<span style="color:var(--gold-2)">占位</span></h2>
-    <div class="map-shell" aria-label="拳馆位置示意">
-      <div class="gridbg"></div>
-      <div class="road"></div>
-      <div class="road v"></div>
-      <div class="compass">N · E<br>S · W</div>
-      <div class="legend">[ 示意图 · 地图嵌入占位 ]</div>
-      <div class="pin">
-        <span class="lbl">ELEPHANT · DUNCAN MILL</span>
-        <span class="dot"></span>
+    <h2 style="margin:14px 0 22px">就在 <span style="color:var(--gold-2)">这。</span></h2>
+    <a class="map-link" href="https://www.google.com/maps/place/Elephant+Muay+Thai/@43.7624476,-79.3543708,17z/data=!4m6!3m5!1s0x89d4d3149a5b15ab:0xd0203943fc3ed20e!8m2!3d43.7624476!4d-79.3543708" target="_blank" rel="noopener" aria-label="在 Google Maps 中查看 Elephant Muay Thai 位置">
+      <div class="map-shell" aria-hidden="true">
+        <div class="gridbg"></div>
+        <div class="road"></div>
+        <div class="road v"></div>
+        <div class="compass">N · E<br>S · W</div>
+        <div class="legend">[ 点击在 Google Maps 中打开 ↗ ]</div>
+        <div class="pin">
+          <span class="lbl">ELEPHANT · DUNCAN MILL</span>
+          <span class="dot"></span>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -135,6 +143,14 @@
       <div>
         <h4>联系</h4>
         <p>(647) 831-1781<br>WeChat: 微信号占位</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/elephant_muay_thai/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/place/Elephant+Muay+Thai/@43.7624476,-79.3543708,17z/data=!4m6!3m5!1s0x89d4d3149a5b15ab:0xd0203943fc3ed20e!8m2!3d43.7624476!4d-79.3543708" target="_blank" rel="noopener" aria-label="Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
